@@ -133,18 +133,3 @@ O projeto pode ser publicado utilizando o **GitHub Pages**, permitindo acessar a
 ---
 
 > 💛 **Você não precisa passar por tudo sozinho. Pedir ajuda também é cuidado.**
-
-````
-
-### 📌 Para o primeiro upload
-
-No GitHub, sua raiz ficará assim:
-
-```text
-📁 entre-nos-setembro-amarelo
-
-📄 index.html
-📄 styles.css
-📄 script.js
-📄 README.md
-````
