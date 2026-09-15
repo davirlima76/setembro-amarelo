@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre Nós — projeto acadêmico de conscientização e valorização da vida.">
+    <title>Entre Nós — Valorização da Vida</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="logo" href="#inicio" aria-label="Entre Nós - início">
+            <span class="logo-mark">✦</span>
+            <span>Entre Nós</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav" id="mainNav" aria-label="Navegação principal">
+            <a href="#inicio">Início</a>
+            <a href="#sentimentos">Como estou</a>
+            <a href="#acolhimento">Acolhimento</a>
+            <a href="#ajuda">Onde buscar ajuda</a>
+        </nav>
+
+        <a class="emergency-link" href="tel:188">CVV 188</a>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <span class="eyebrow">SETEMBRO AMARELO • VALORIZAÇÃO DA VIDA</span>
+                <h1>Você não precisa<br><span>passar por tudo sozinho.</span></h1>
+                <p>
+                    Um espaço simples para reconhecer seus sentimentos, encontrar
+                    acolhimento e descobrir caminhos de apoio. Pedir ajuda também é cuidado.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#sentimentos">Como estou?</a>
+                    <a class="btn btn-secondary" href="#ajuda">Encontrar apoio</a>
+                </div>
+            </div>
+
+            <div class="hero-card" aria-label="Mensagem de acolhimento">
+                <div class="sun"><span>☀</span></div>
+                <p class="quote">“Tudo bem desacelerar. Um momento de cada vez.”</p>
+                <span class="small-note">Cuide de você com a mesma gentileza que oferece aos outros.</span>
+            </div>
+        </section>
+
+        <section class="intro section">
+            <div>
+                <span class="section-label">01 / ACOLHER</span>
+                <h2>Se hoje estiver difícil,<br>comece pelo <em>agora.</em></h2>
+            </div>
+            <p>
+                Nem sempre precisamos encontrar uma solução para tudo de uma vez.
+                Às vezes, o primeiro passo é reconhecer o que estamos sentindo,
+                fazer uma pausa e conversar com alguém de confiança.
+            </p>
+        </section>
+
+        <section class="mood-section section" id="sentimentos">
+            <div class="section-heading">
+                <span class="section-label">02 / COMO ESTOU?</span>
+                <h2>Reconhecer o que sentimos<br>também é <em>cuidado.</em></h2>
+                <p>
+                    Não existe resposta certa. Escolha a opção que mais combina
+                    com o seu momento e receba uma mensagem de apoio.
+                </p>
+            </div>
+
+            <div class="mood-layout">
+                <div class="mood-card">
+                    <div class="mood-question">
+                        <span>Agora</span>
+                        <h3>Como você está se sentindo?</h3>
+                    </div>
+
+                    <div class="mood-options" role="group" aria-label="Escolha seu sentimento">
+                        <button class="mood-option" data-mood="muito-bem" data-emoji="😄" data-label="Muito bem">
+                            <span>😄</span><small>Muito bem</small>
+                        </button>
+                        <button class="mood-option" data-mood="bem" data-emoji="🙂" data-label="Bem">
+                            <span>🙂</span><small>Bem</small>
+                        </button>
+                        <button class="mood-option" data-mood="neutro" data-emoji="😐" data-label="Neutro">
+                            <span>😐</span><small>Neutro</small>
+                        </button>
+                        <button class="mood-option" data-mood="triste" data-emoji="😔" data-label="Triste">
+                            <span>😔</span><small>Triste</small>
+                        </button>
+                        <button class="mood-option" data-mood="sobrecarregado" data-emoji="😣" data-label="Sobrecarregado">
+                            <span>😣</span><small>Sobrecarregado</small>
+                        </button>
+                    </div>
+
+                    <div class="mood-result" id="moodResult" aria-live="polite">
+                        <span class="result-icon">♡</span>
+                        <div>
+                            <strong>Seu sentimento importa.</strong>
+                            <p>Escolha uma opção acima para receber uma mensagem de apoio.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="history-card">
+                    <div class="history-header">
+                        <div>
+                            <span class="section-label">MEUS REGISTROS</span>
+                            <h3>Últimos sentimentos</h3>
+                        </div>
+                        <button class="clear-history" id="clearHistory" type="button">Limpar</button>
+                    </div>
+
+                    <div id="moodHistory" class="mood-history">
+                        <p class="empty-history">Você ainda não registrou um sentimento.</p>
+                    </div>
+                    <p class="privacy-note">Os registros ficam apenas neste navegador.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="message-section section">
+            <div class="message-card">
+                <div class="message-icon">♡</div>
+                <div>
+                    <span class="section-label">03 / UMA MENSAGEM</span>
+                    <h2 id="messageText">Você merece cuidado, descanso e espaço para ser ouvido.</h2>
+                    <button class="btn btn-outline" id="newMessage" type="button">Outra mensagem</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="support section" id="acolhimento">
+            <div class="section-heading">
+                <span class="section-label">04 / ACOLHIMENTO</span>
+                <h2>Às vezes, falar é o começo.</h2>
+                <p>Escolha uma atitude pequena que pode ajudar você ou alguém próximo hoje.</p>
+            </div>
+
+            <div class="support-grid">
+                <article class="support-card">
+                    <span class="card-number">01</span>
+                    <div class="card-icon">◌</div>
+                    <h3>Converse</h3>
+                    <p>Procure uma pessoa em quem você confia e diga, do seu jeito, como está se sentindo.</p>
+                </article>
+
+                <article class="support-card featured">
+                    <span class="card-number">02</span>
+                    <div class="card-icon">♡</div>
+                    <h3>Escute</h3>
+                    <p>Se alguém procurar você, ofereça presença e atenção. Nem sempre é preciso ter respostas.</p>
+                </article>
+
+                <article class="support-card">
+                    <span class="card-number">03</span>
+                    <div class="card-icon">+</div>
+                    <h3>Busque ajuda</h3>
+                    <p>Profissionais e serviços de saúde podem ajudar em momentos difíceis. Você não precisa resolver tudo sozinho.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="help section" id="ajuda">
+            <div class="help-intro">
+                <span class="section-label">05 / REDE DE APOIO</span>
+                <h2>Onde buscar<br><em>ajuda.</em></h2>
+                <p>Se você precisa de apoio, existem pessoas e serviços preparados para acolher.</p>
+            </div>
+
+            <div class="help-list">
+                <article class="help-item">
+                    <div class="help-symbol">188</div>
+                    <div>
+                        <h3>CVV — Centro de Valorização da Vida</h3>
+                        <p>Atendimento de apoio emocional pelo telefone 188.</p>
+                    </div>
+                    <a href="tel:188" class="arrow-link" aria-label="Ligar para o CVV">↗</a>
+                </article>
+
+                <article class="help-item">
+                    <div class="help-symbol">CAPS</div>
+                    <div>
+                        <h3>CAPS</h3>
+                        <p>Centros de Atenção Psicossocial da rede pública de saúde.</p>
+                    </div>
+                    <span class="arrow-link" aria-hidden="true">→</span>
+                </article>
+
+                <article class="help-item">
+                    <div class="help-symbol">UBS</div>
+                    <div>
+                        <h3>Unidades de Saúde</h3>
+                        <p>Postos e unidades de saúde podem orientar e encaminhar para atendimento.</p>
+                    </div>
+                    <span class="arrow-link" aria-hidden="true">→</span>
+                </article>
+
+                <article class="help-item">
+                    <div class="help-symbol">PRO</div>
+                    <div>
+                        <h3>Profissionais de saúde</h3>
+                        <p>Psicólogos, psiquiatras e outros profissionais podem oferecer acompanhamento adequado.</p>
+                    </div>
+                    <span class="arrow-link" aria-hidden="true">→</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="emergency section">
+            <div class="emergency-content">
+                <span class="section-label">PRECISA DE APOIO AGORA?</span>
+                <h2>Não fique sozinho<br>com esse momento.</h2>
+                <p>Se você estiver em sofrimento emocional, procure uma pessoa de confiança ou um serviço de apoio.</p>
+                <a class="btn btn-light" href="tel:188">Ligar para o CVV — 188</a>
+                <a class="website-link" href="https://www.cvv.org.br/" target="_blank" rel="noopener noreferrer">Acessar cvv.org.br ↗</a>
+            </div>
+            <div class="emergency-shape" aria-hidden="true">✦</div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div>
+                <a class="logo footer-logo" href="#inicio">
+                    <span class="logo-mark">✦</span>
+                    <span>Entre Nós</span>
+                </a>
+                <p>Um projeto de conscientização e valorização da vida.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#inicio">Início</a>
+                <a href="#sentimentos">Como estou</a>
+                <a href="#acolhimento">Acolhimento</a>
+                <a href="#ajuda">Ajuda</a>
+            </div>
+        </div>
+
+        <div class="legal">
+            <p><strong>Projeto acadêmico:</strong> esta aplicação foi desenvolvida para fins educacionais e de conscientização. Ela não substitui atendimento psicológico, psiquiátrico ou médico profissional.</p>
+            <p>Em uma situação de emergência, procure imediatamente um serviço de saúde ou o serviço de emergência da sua região.</p>
+        </div>
+
+        <div class="copyright">© 2026 Entre Nós • Setembro Amarelo • Projeto acadêmico</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
